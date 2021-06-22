@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-/* import { useParams } from "react-router-dom"; */
 import {
     Link
 } from "react-router-dom";
@@ -10,12 +9,10 @@ class BeerDetail extends Component {
         isLoaded: false
     }
     componentDidMount() {
-        
+        console.log(this.props)
         console.log(this.props.match.params)
-        // letzter teil hängt von dem :name in der App ab
         let id = this.props.match.params.beerdetail
         console.log(id)
-        // console.log(this.props.match.params.myId)
         fetch(`https://ih-beers-api2.herokuapp.com/beers/${id}`)
             .then(response => response.json())
             .then(json => {
@@ -23,8 +20,6 @@ class BeerDetail extends Component {
                 this.setState({ beer: json, isLoaded: true });
             })
     }
-
-
     render() {
         
         return (
@@ -32,14 +27,17 @@ class BeerDetail extends Component {
                 
                 {this.state.isLoaded ?
                     <div>
-                    <img src={this.state.image_url} alt="" /> 
-                      <h1>{this.state.name}</h1>
-                      <p>{this.state.tagline}</p>
-                      <p>created by: {this.state.contributed_by}</p>
+                    <img src={this.state.beer.image_url} alt="" /> 
+                      <h1>{this.state.beer.name}</h1>
+                      <p>{this.state.beer.tagline}</p>
+                      <p>{this.state.beer.first_brewed}</p>
+                      <p>{this.state.beer.attenuation_level}</p>
+                      <p>{this.state.beer.description}</p>
+                      {/* <p>created by: {this.state.beer.contributed_by}</p> */}
                     </div>
                     : "LOADING"}
 
-                <Link to="/beer">Beer</Link>
+                <Link className="link_beer" to="/"><img src="./img/Logo.png" alt="" /></Link>
             </div>
         );
     }

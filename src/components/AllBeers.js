@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {
     Link
 } from "react-router-dom";
-import BeerDetail from './BeerDetail';
 
 class AllBeers extends Component {
     state = { 
@@ -22,19 +21,21 @@ class AllBeers extends Component {
         return ( 
             <div>
                 <div className="api">
-                {/* Das map wird erst ausgeführt, wenn der isLoaded-State true ist. Sonst wird Loading gezeigt */}
                 {this.state.isLoaded ?
-                    this.state.beer.map((ele, i) => <div>
+                    this.state.beer.map((ele, i) => 
+                    <div className="beer_item">
                       <img src={ele.image_url} alt="" /> 
-                      <h1>{ele.name}</h1>
-                      <p>{ele.tagline}</p>
-                      <p>created by: {ele.contributed_by}</p>
-                    <Link to={`/beerdetail/${ele._id}`}>{ele.name}</Link>
-                    </div>)
+                      <div className="beer_info">
+                        <h1>{ele.name}</h1>
+                        <p>{ele.tagline}</p>
+                        <div>created by: {ele.contributed_by}</div>
+                        <Link to={`/all-beers/${ele._id}`}> <h1>Detail</h1></Link>
+                    </div>
+                </div>)
                     : "Loading ..."
                 }
             </div>
-                <Link to="/beer">Beer</Link>
+                <Link className="link_beer" to="/"><img src="./img/Logo.png" alt="" /></Link>
             </div>
         );
     }

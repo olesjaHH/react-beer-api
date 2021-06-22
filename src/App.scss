@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.all_beer {
+    margin-left: 10%;
+    img {
+        width: 300px;
+    }
+    a {
+        text-decoration: none;
+    }
+    h1 {
+        background: rgb(223, 203, 91);
+        color: white;
+        width: 300px;
+    }
+    p {
+        width: 300px;
+        padding-bottom: 3%;
+    }
+    
+}
+.random_beer {
+    margin-left: 10%;
+    img {
+        width: 300px;
+    }
+    a {
+        text-decoration: none;
+    }
+    h1 {
+        background: rgb(223, 203, 91);
+        color: white;
+        width: 300px;
+    }
+    p {
+        width: 300px;
+        padding-bottom: 3%;
+    }
+}
+.link_beer {
+    background: rgb(207, 172, 16);
+    display: block;
+    text-align: center;
+    padding: 5%;
+}
+.beer_item {
+    display: flex;
+    border-bottom: 3px solid black;
+    margin: 2%;
+    img {
+        width: 100px;
+        /* height: 300px; */
+        object-fit: cover;
+        padding: 5%;
+    }
+    .beer_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p {
+            color: rgb(231, 207, 97);
+            font-weight: bold;
+        }
+        a {
+            text-decoration: none;
+            background: rgb(212, 177, 21);
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            width: 200px;
+            margin: 10% 0;
+        }
+        div {
+            padding: 5% 0;
+        }
+    }
+}

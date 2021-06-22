@@ -1,10 +1,10 @@
-import './App.css';
-
+/* import './App.css'; */
+import './App.scss';
 import AllBeers from './components/AllBeers';
 import RandomBeer from './components/RandomBeer';
-import Beer from './components/Beer';
+import Home from './components/Home';
 import BeerDetail from './components/BeerDetail';
-import Nav from './components/Nav';
+
 
 import {
   BrowserRouter as Router,
@@ -19,12 +19,10 @@ function App() {
     <Router>
       <div>
         <Switch>
-          <Route path="/all-beers" component={AllBeers} />
+          <Route path="/" component={Home} exact/>
+          <Route path="/all-beers" component={AllBeers} exact />
           <Route path="/all-beers/:beerdetail" component={BeerDetail} />
           <Route path="/random-beer" component={RandomBeer} />
-          {/* <Route path="/beerdetail" component={BeerDetail} /> */}
-          <Route path="/beer" component={Beer} />
-          <Route path="/nav" component={Nav} />
         </Switch> 
 
       </div>
