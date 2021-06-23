@@ -30,7 +30,7 @@ class RandomBeer extends Component {
                    <p className="grey-style">Attenuation level: <span>{this.state.beer.attenuation_level}</span></p>
                    <p className="desc-style">{this.state.beer.description}</p>
                 </div>
-                 : "LOADING"}
+                 : "LOADING..."}
 
                 <Link className="link_beer" to="/"><img src="./img/Logo.png" alt="" /></Link>
             </div>

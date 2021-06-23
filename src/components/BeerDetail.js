@@ -35,7 +35,7 @@ class BeerDetail extends Component {
                       <p className="desc-style">{this.state.beer.description}</p>
                     </div>
                     
-                    : "LOADING"}
+                    : "LOADING..."}
 
                 <Link className="link_beer" to="/"><img src="../img/Logo.png" alt="" /></Link>
             </div>
