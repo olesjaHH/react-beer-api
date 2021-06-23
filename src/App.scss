@@ -1,11 +1,14 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 .all_beer {
-    margin-left: 10%;
+    
+    padding-left: 10%;
     img {
         width: 300px;
+        
     }
     a {
         text-decoration: none;
@@ -50,7 +53,7 @@
     border-bottom: 3px solid black;
     margin: 2%;
     img {
-        width: 100px;
+        width: 200px;
         /* height: 300px; */
         object-fit: cover;
         padding: 5%;
