@@ -1,4 +1,3 @@
-/* import './App.css'; */
 import './App.scss';
 import AllBeers from './components/AllBeers';
 import RandomBeer from './components/RandomBeer';
